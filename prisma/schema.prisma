@@ -1,0 +1,42 @@
+// schema.prisma
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(uuid()) @db.UniqueIdentifier
+  name      String   @db.NVarChar(255)
+  email     String   @unique @db.NVarChar(255)
+  password  String   @db.NVarChar(255)
+  points    Int      @default(500)
+  createdAt DateTime @default(now()) @db.DateTime2
+  role      String   @default("USER")
+
+  // Relations
+  sentTransactions     Transaction[] @relation("SentTransactions")
+  receivedTransactions Transaction[] @relation("ReceivedTransactions")
+}
+
+model Transaction {
+  id          String    @id @default(uuid()) @db.UniqueIdentifier
+  amount      Int
+  createdAt   DateTime  @default(now()) @db.DateTime2
+  expiresAt   DateTime  @db.DateTime2
+  confirmedAt DateTime? @db.DateTime2
+  status      String    @default("PENDING")
+
+  // Relations
+  fromUser   User   @relation("SentTransactions", fields: [fromUserId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  fromUserId String @db.UniqueIdentifier
+
+  toUser   User   @relation("ReceivedTransactions", fields: [toUserId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  toUserId String @db.UniqueIdentifier
+
+  @@index([createdAt])
+}

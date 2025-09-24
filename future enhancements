@@ -1,0 +1,14 @@
+Schema:
+
+Include user.updatedAt.
+Create indexes for all queries.
+Add a caching layer when scaling to handle large amounts of data and repeated queries.
+
+Authentication:
+
+Implement refresh token logic.
+
+Transactions:
+
+Support retrieving transactions by different criteria (e.g., using createdAt Implemented as an example).
+Allow users to choose whether they want to retrieve all their transactions or only those where they are the sender or receiver.
