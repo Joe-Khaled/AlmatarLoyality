@@ -34,19 +34,21 @@ A secure backend service for transferring points between users with expiration l
 2. **Install dependencies**
     npm install
 3. **Configure environment variables**
+   ```bash
     Create a .env file in the root directory:
     DATABASE_URL="sqlserver://localhost:1433;database=db_name;user=Your_username;password=Your_password;encrypt=true;trustServerCertificate=true"
     PORT=Your Port
     JWT_SECRET_KEY=your-very-strong-secret
     REDIS_HOST=127.0.0.1
     REDIS_PORT=6379
-4. **Run database migrations (Prisma)**
+   ```
+5. **Run database migrations (Prisma)**
     npx prisma migrate dev
-5. **Start Redis server**
+6. **Start Redis server**
     redis-server (Run this command in the directory where Redis is installed on your device)
-6. **Run background worker**
+7. **Run background worker**
     npm run worker
-7. **Start the application**    
+8. **Start the application**    
     Development: `npm run dev`
     Production: `npm run start`
 
