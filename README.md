@@ -17,7 +17,7 @@ A secure backend service for transferring points between users with expiration l
 - Background jobs with BullMQ & Redis
 - Database layer with Prisma ORM + SQL Server
 - Centralized error handling and validation middlewares
-- Includes request validation with Joi/Zod
+- Includes request validation with Joi
 
 
 ## Tech Stack
