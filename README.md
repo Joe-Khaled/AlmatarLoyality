@@ -65,7 +65,7 @@ src/
 └── prisma/        # Prisma Schema & Migrations
 ```
 ## View Postman Collection
-    [Click here to view the Postman Collection](https://documenter.getpostman.com/view/35041186/2sB3QCTEHZ)
+   [Click here to view the Postman Collection](https://documenter.getpostman.com/view/35041186/2sB3QCTEHZ)
 
 ## Thank You
 
