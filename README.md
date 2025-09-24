@@ -51,15 +51,17 @@ A secure backend service for transferring points between users with expiration l
     Production: `npm run start`
 
 ## Project Structure
-src/
- ├── controllers/    # Business Logic
- ├── jobs/           # Expire Transaction   
- ├── middlewares/    # Validation, Async Wrapper, Validation , Verify Token
- ├── routes/         # Route Definitions
- ├── utils/          # Helper functions And Error Handling
- ├── workers/        # BullMQ Workers
- └── prisma/         # Prisma Schema & Migrations
 
+```bash
+src/
+├── controllers/   # Business Logic
+├── jobs/          # Expire Transaction
+├── middlewares/   # Validation, Async Wrapper, Verify Token
+├── routes/        # Route Definitions
+├── utils/         # Helper functions and Error Handling
+├── workers/       # BullMQ Workers
+└── prisma/        # Prisma Schema & Migrations
+```
 ## View Postman Collection
     (https://documenter.getpostman.com/view/35041186/2sB3QCTEHZ)
 
