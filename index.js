@@ -4,8 +4,8 @@ const PORT=process.env.PORT;
 const express=require('express');
 const app=express();
 
-const userRoutes=require('./routes/user');
-const transactionRoutes=require('./routes/transaction');
+const userRoutes=require('./src/routes/user');
+const transactionRoutes=require('./src/routes/transaction');
 
 app.use(express.json());
 

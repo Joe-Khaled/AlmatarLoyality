@@ -6,7 +6,7 @@ const asyncWrapper=require('../middlewares/asyncWrapper');
 const { PrismaClient }=require('@prisma/client');
 const prisma=new PrismaClient()
 const { generateJwt } = require('../utils/generateJwt');
-const validation=require('../middlewares/validation');
+const validation=require('../utils/validation');
 //Validation Schemas
 
 const registerSchema =validation.registerSchema
@@ -57,7 +57,7 @@ const signIn=asyncWrapper(
     const {value,error}=signInSchema.validate({email,password});
     if(error)
     {
-      console.log(error);
+
         const err=appError.create("Invalid Credentials",404,httpStatusText.FAILED);
         res.status(404).json(err);
         return;

@@ -4,7 +4,7 @@ const asyncWrapper=require('../middlewares/asyncWrapper');
 const { PrismaClient }=require('@prisma/client');
 const prisma=new PrismaClient()
 const mapping = require('../utils/transactionMapping');
-const validation=require('../middlewares/validation');
+const validation=require('../utils/validation');
 const expireTransaction = require('../jobs/expireTransaction');
 
 const emailSchema=validation.emailSchema

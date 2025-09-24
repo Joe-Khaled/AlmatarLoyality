@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "worker":"node queues/transactionWorker.js"
+    "worker":"node src/queues/transactionWorker.js"
   },
   "author": "",
   "license": "ISC",
