@@ -4,8 +4,9 @@ A secure backend service for transferring points between users with expiration l
 - [Features](#-Features)
 - [Tech Stack](#Tech-Stack)
 - [Setup](#Setup)
-- [API Endpoints](#API-Endpoints)
 - [Project Structure](#Project-Structure)
+- [View Postman Collection](#view-postman-collection)
+- [Thank You](#thank-you)
 
 ## Features
 - JWT-based authentication with secure password hashing (bcrypt)
@@ -42,25 +43,12 @@ A secure backend service for transferring points between users with expiration l
 4. **Run database migrations (Prisma)**
     npx prisma migrate dev
 5. **Start Redis server**
-    redis-server
+    redis-server (Run this command in the directory where Redis is installed on your device)
 6. **Run background worker**
     npm run worker
 7. **Start the application**    
     Development: `npm run dev`
     Production: `npm run start`
-
-## API Endpoints
-
-### Auth
-- `POST /api/auth/user` – Register user
-- `POST /api/auth/user/login` – Login
-- `GET  /api/user/points` - Retrieve User Points
-
-### Transactions
-- `POST /api/transactions` – Create New Transfer
-- `POST /api/transactions/confirm/:id` – Confirm Transfer
-- `GET /api/transactions` - List All Transactions
-- `GET /api/transactions/user` - List Transactions For Single User
 
 ## Project Structure
 src/
@@ -72,3 +60,12 @@ src/
  ├── workers/        # BullMQ Workers
  └── prisma/         # Prisma Schema & Migrations
 
+## View Postman Collection
+    (https://documenter.getpostman.com/view/35041186/2sB3QCTEHZ)
+
+## Thank You
+
+II would like to thank you for the professional recruitment process, including the technical interview that I was glad to successfully pass.  
+I truly enjoyed working on this task and learned a lot throughout the process.  
+
+It would be an honor to work with such an amazing team, and I’m excited about the possibility of contributing my skills and growing further with you. 🚀
