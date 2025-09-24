@@ -69,7 +69,7 @@ src/
 
 ## Thank You
 
-II would like to thank you for the professional recruitment process, including the technical interview that I was glad to successfully pass.  
+I would like to thank you for the professional recruitment process, including the technical interview that I was glad to successfully pass.  
 I truly enjoyed working on this task and learned a lot throughout the process.  
 
 It would be an honor to work with such an amazing team, and I’m excited about the possibility of contributing my skills and growing further with you. 🚀
