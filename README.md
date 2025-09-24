@@ -6,6 +6,7 @@ A secure backend service for transferring points between users with expiration l
 - [Setup](#Setup)
 - [Project Structure](#Project-Structure)
 - [View Postman Collection](#view-postman-collection)
+- [Enhancements can be implemented](#enhancements-outside-the-scope)
 - [Thank You](#thank-you)
 
 ## Features
@@ -66,6 +67,18 @@ src/
 ```
 ## View Postman Collection
    [Click here to view the Postman Collection](https://documenter.getpostman.com/view/35041186/2sB3QCTEHZ)
+
+## Enhancements (Outside the Scope)
+These enhancements go beyond the current implementation and could be considered in future iterations:
+### Schema
+- Include `user.updatedAt` for better tracking of updates.
+- Create more indexes to improve database performance (When needed).
+- Add a caching layer to handle large amounts of data and repeated queries when scaling.
+### Authentication
+- Implement refresh token logic for improved security and session management.
+### Transactions
+- Support retrieving transactions by different criteria (e.g., `createdAt` as an example).
+- Allow users to choose whether they want to retrieve all their transactions or only those where they are the sender or receiver.
 
 ## Thank You
 
