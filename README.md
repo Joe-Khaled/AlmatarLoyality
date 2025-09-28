@@ -44,12 +44,15 @@ A secure backend service for transferring points between users with expiration l
     REDIS_PORT=6379
    ```
 5. **Run database migrations (Prisma)**
-    npx prisma migrate dev
-6. **Start Redis server**
+   ```bash
+   npx prisma migrate dev
+   npx prisma generate
+   ```
+7. **Start Redis server**
     redis-server (Run this command in the directory where Redis is installed on your device)
-7. **Run background worker**
+8. **Run background worker**
     npm run worker
-8. **Start the application**    
+9. **Start the application**    
     Development: `npm run dev`
     Production: `npm run start`
 
